@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ 
+<html>
+    <!--Event and then we need to attach a event handler to it-->
+    <body>
+        <h1>Count characters App</h1>
+ 
+        <label for="inputText">Enter some text</label>
+        <input type="text" id="inputText" onkeyup="countCharacters()">
+ 
+        <label for="inputText2">Enter some text</label>
+        <input type="text" id="inputText2">
+        <button type="submit" onclick="countCharacterOnClickOfButton()">Click to count characters</button>
+ 
+        <p id="displayCharaterCount"></p>
+    </body>
+ 
+    <script>
+        function countCharacters(){
+            const inputTextLength = document.getElementById("inputText").value.length
+            document.getElementById("displayCharaterCount").innerHTML = "The count of character is " + inputTextLength;
+        }
+ 
+        function countCharacterOnClickOfButton(){
+            const inputTextLength = document.getElementById("inputText2").value.length
+            document.getElementById("displayCharaterCount").innerHTML = "The count of character is " + inputTextLength;
+        }
+    </script>
+</html>
